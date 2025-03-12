@@ -1,0 +1,155 @@
+.container {
+  padding: 20px;
+  direction: rtl;
+  max-width: 1100px;
+  margin: 0 auto;
+  min-height: 53.5vh;
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .error {
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .noPitchesFound {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+
+    p {
+      color: #666;
+      font-size: 18px;
+    }
+  }
+  .loading {
+    text-align: center;
+  }
+  .searchContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .searchBar {
+      display: flex;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 8px 12px;
+      margin-bottom: 20px;
+      width: 70%;
+
+      input {
+        font-family: "Cairo";
+        flex: 1;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        margin-right: 8px;
+      }
+
+      .searchIcon {
+        color: #666;
+        font-size: 20px;
+      }
+    }
+  }
+  .pitchList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .pitchItem {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    justify-self: flex-start;
+    border-bottom: 1px solid #eee;
+    padding: 2rem 20px;
+    margin: 0;
+    align-self: center;
+
+    &:hover {
+      background-color: #f7f7f7;
+      cursor: pointer;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .pitchContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: start;
+    gap: 1rem;
+  }
+
+  .pitchIcon {
+    color: #28a745;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .pitchDetails {
+    p {
+      margin: 0;
+    }
+
+    .pitchName {
+      font-weight: bold;
+      color: #333;
+      font-size: 18px;
+    }
+
+    .pitchLocation {
+      color: #666;
+    }
+  }
+
+  ul {
+    gap: 0;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    direction: ltr;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .container {
+    .pitchList {
+      padding: 0;
+    }
+    .pitchItem {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 2rem 0;
+    }
+    .rating {
+      padding-inline-start: 2rem;
+    }
+  }
+}

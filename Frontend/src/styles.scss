@@ -1,0 +1,31 @@
+/* Font Constants */
+$font-primary: "Arial", sans-serif;
+$font-secondary: "Verdana", sans-serif;
+
+/* Color Constants */
+$primary-color: #007bff; // Main brand color (blue)
+$accent-color: #28a745; // Accent color (green)
+
+$warning-color: #ffc107; // Yellow for warning messages
+$error-color: #dc3545; // Red for error messages
+
+/* Backgrounds */
+$modal-overlay-bg: rgba(0, 0, 0, 0.5);
+/* Modal background */
+$modal-bg: #fff;
+/* Modal content background */
+
+/* Borders and Shadows */
+$border-radius: 8px;
+$box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+/* General Spacing */
+$padding-small: 8px;
+$padding-medium: 15px;
+$padding-large: 20px;
+
+/* Button Styles */
+$button-bg: $primary-color;
+$button-focus-bg: $accent-color; // Focus state for button
+$button-text-color: #fff;
+$button-border-radius: 5px;

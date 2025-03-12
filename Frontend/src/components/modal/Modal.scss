@@ -1,0 +1,123 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  width: 400px;
+  padding: 1.5rem;
+  border-radius: 7px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1010;
+  animation: fadeIn 0.3s ease-in-out;
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .close {
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      font-size: 20px;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 0.5rem;
+      margin-left: 0.5rem;
+    }
+
+    h2 {
+      text-align: center;
+      color: #28a745;
+      margin-bottom: 20px;
+      margin-top: 0;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+
+    .form-field {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      label {
+        font-size: 12px;
+        font-weight: 600;
+        color: #333;
+      }
+
+      input {
+        padding: 12px 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 14px;
+        outline: none;
+        transition: all 0.3s;
+        background-color: #f9f9f9;
+        width: 90%;
+
+        &:hover {
+          background-color: #ffffff;
+        }
+
+        &:focus {
+          border-color: #28a745;
+          box-shadow: 0 0 5px rgba(40, 167, 69, 0.3);
+          background-color: #ffffff;
+        }
+      }
+    }
+
+    button[type="submit"] {
+      background-color: #28a745;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      font-family: 'Cairo';
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #218838; // Darker green on hover
+      }
+    }
+
+    p {
+      color: red;
+      font-size: 12px;
+      margin: 0;
+    }
+  }
+
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

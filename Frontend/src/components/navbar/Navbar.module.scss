@@ -1,0 +1,307 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+  direction: ltr;
+}
+
+.navbarLogo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+
+  img {
+    width: 35px;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333333;
+
+    span {
+      color: #28a745;
+    }
+  }
+}
+
+.navbarLogoSidebar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+
+  img {
+    width: 27px;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #333333;
+
+    span {
+      color: #28a745;
+    }
+  }
+}
+.navLink {
+  color: #333;
+  text-decoration: none;
+
+  &:hover {
+    color: #28a745;
+  }
+}
+
+.navList {
+  z-index: 1000;
+  list-style: none;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 2rem;
+  margin: 0;
+
+  .listItem {
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    padding: 5px;
+    transition: color 0.3s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 100%;
+      height: 2px;
+      background-color: #28a745;
+      transition: left 0.3s ease;
+    }
+
+    &:hover {
+      color: #28a745;
+    }
+
+    &:hover::after {
+      left: 0;
+    }
+  }
+}
+
+.navbarButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.noBtn {
+  padding: 5px 15px;
+  font-size: 1rem;
+  color: #28a745;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-self: flex-end;
+  font-family: "Cairo";
+}
+.signout {
+  padding: 5px 15px;
+  font-size: 1rem;
+  background-color: white;
+  border: 1px solid #28a745;
+  border-radius: 5px;
+  color: #28a745;
+  cursor: pointer;
+  display: flex;
+  align-self: flex-end;
+  font-family: "Cairo";
+}
+
+.btn {
+  padding: 5px 15px;
+  font-size: 1rem;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-self: flex-end;
+  font-family: "Cairo";
+}
+
+.userMenu {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  z-index: 100;
+
+  .userMenuBtn {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.username {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.dropdownIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.arrowIcon {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+
+  &.open {
+    transform: rotate(180deg);
+  }
+}
+
+.dropdown {
+  position: absolute;
+  top: 65px;
+  left: 5px;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  direction: rtl;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+  }
+
+  li {
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+
+    &:last-child {
+      border-top: 1px solid #e6e6e6;
+    }
+  }
+}
+
+.userMenu {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  z-index: 100;
+
+  .userMenuBtn {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-family: "Cairo";
+  }
+}
+
+.username {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.dropdownIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.arrowIcon {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+
+  &.open {
+    transform: rotate(180deg);
+  }
+}
+
+@mixin item() {
+  font-family: "Cairo" !important;
+  font-size: 16px !important;
+  padding: 8px 16px !important;
+  color: #333 !important;
+  min-width: 140px;
+
+  &:hover {
+    background-color: #f0f0f0 !important;
+  }
+}
+
+.menuItem {
+  @include item();
+}
+
+.lastMenuItem {
+  @include item();
+  border-top: 1px solid #d5d5d5 !important;
+}
+
+.hamburger {
+  display: none;
+}
+.userInfo {
+  display: block;
+}
+
+@media screen and (max-width: 1000px) {
+  .navbarButtons {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  .userInfo {
+    display: none;
+  }
+  .navList {
+    display: none;
+  }
+  .sideBarItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .navbar {
+    font-family: "Cairo";
+    padding: 1rem 2rem;
+  }
+}

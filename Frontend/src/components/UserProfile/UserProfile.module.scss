@@ -1,0 +1,152 @@
+.userProfile {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Cairo", sans-serif;
+  direction: rtl;
+
+  .title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .error {
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .success {
+    color: rgb(13, 179, 13);
+    font-size: 16px;
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .inputWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  input {
+    width: 100%;
+    padding-right: 40px;
+  }
+
+  .toggleButton {
+    position: absolute;
+    left: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #aaa;
+    font-size: 18px;
+  }
+
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    label {
+      font-weight: bold;
+      color: #555;
+    }
+
+    input {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+      outline: none;
+      font-family: "Cairo", sans-serif;
+
+      &:focus {
+        border-color: #28a745;
+        box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.2);
+      }
+    }
+  }
+
+  .profileView {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .sectionTitle {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 16px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 16px;
+      color: #555;
+    }
+  }
+
+  .buttonGroup {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "Cairo", sans-serif;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  .saveButton {
+    background-color: #28a745;
+    color: white;
+  }
+
+  .editButton {
+    background-color: #28a745;
+    color: white;
+  }
+
+  .changePasswordSmallButton {
+    background-color: white;
+    color: #28a745;
+    border: 1px solid #28a745;
+
+    &:hover {
+      background-color: #e8f3ea;
+    }
+  }
+
+  .notFound {
+    text-align: center;
+    font-size: 18px;
+    color: #dc3545;
+    margin-top: 20px;
+  }
+}
