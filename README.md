@@ -90,9 +90,6 @@ npm install
 npm start
 ```
 
-## 📷 Screenshots
-![Uploading image.png…]()
-
 
 
 ## 🤝 Contributing
